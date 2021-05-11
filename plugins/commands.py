@@ -11,8 +11,9 @@ from script import script
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(client, message):
     try:
-        await message.reply_text(
-            text=script.START_MSG.format(message.from_user.mention),
+        await message.reply_photo(
+            photo="https://telegra.ph/file/de86c8187b332cf5d3780.jpg",
+            caption=script.START_MSG.format(message.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
